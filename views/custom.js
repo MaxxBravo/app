@@ -3,7 +3,7 @@ let $OTHERS = $('#otherContacts');
 
 function showProfilePictures($zone, data){    
     $zone.append(data.map(contact => 
-        $(`<div class="fader"><img src="${contact.smallImageURL}" style="max-height: 75px"></div>`)
+        $(`<div id="${contact.id}" class="fader"><img src="${contact.smallImageURL}" style="max-height: 100px"></div>`)
     )); 
 
     $('.fader', $zone).on('click', function(){
